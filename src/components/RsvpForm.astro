@@ -14,14 +14,14 @@ import ContentBlock from './ContentBlock.astro';
       id="rsvp-form"
     >
       <div>
-        <label for="guests" class="block text-neutral-800 font-medium mb-2 text-lg">
+        <label for="guests" class="block text-neutral-800 font-medium mb-2 text-base">
           Antal gäster
         </label>
         <select 
           id="guests" 
           name="guests" 
           required
-          class="w-full px-5 py-4 border border-neutral-300 rounded focus:outline-none focus:border-[#d97706] focus:ring-1 focus:ring-[#d97706]/20 bg-white text-neutral-900 text-lg"
+          class="w-full px-5 py-4 border border-neutral-300 rounded focus:outline-none focus:border-[#d97706] focus:ring-1 focus:ring-[#d97706]/20 bg-white text-neutral-900 text-base"
         >
           <option value="">Välj antal</option>
           <option value="1">1 person</option>
@@ -33,7 +33,7 @@ import ContentBlock from './ContentBlock.astro';
       </div>
       
       <div>
-        <label for="dietary" class="block text-neutral-800 font-medium mb-2 text-lg">
+        <label for="dietary" class="block text-neutral-800 font-medium mb-2 text-base">
           Särskilda kostbehov
         </label>
         <textarea 
@@ -41,12 +41,12 @@ import ContentBlock from './ContentBlock.astro';
           name="dietary" 
           rows="4"
           placeholder="Allergier, vegetariskt, glutenfritt, etc."
-          class="w-full px-5 py-4 border border-neutral-300 rounded focus:outline-none focus:border-[#d97706] focus:ring-1 focus:ring-[#d97706]/20 bg-white text-neutral-900 resize-none text-lg"
+          class="w-full px-5 py-4 border border-neutral-300 rounded focus:outline-none focus:border-[#d97706] focus:ring-1 focus:ring-[#d97706]/20 bg-white text-neutral-900 resize-none text-base"
         ></textarea>
       </div>
       
       <div>
-        <label for="email" class="block text-neutral-800 font-medium mb-2 text-lg">
+        <label for="email" class="block text-neutral-800 font-medium mb-2 text-base">
           E-postadress <span class="text-[#dc2626]">*</span>
         </label>
         <input 
@@ -55,15 +55,15 @@ import ContentBlock from './ContentBlock.astro';
           name="email" 
           required
           placeholder="din@epost.se"
-          class="w-full px-5 py-4 border border-neutral-300 rounded focus:outline-none focus:border-[#d97706] focus:ring-1 focus:ring-[#d97706]/20 bg-white text-neutral-900 text-lg"
+          class="w-full px-5 py-4 border border-neutral-300 rounded focus:outline-none focus:border-[#d97706] focus:ring-1 focus:ring-[#d97706]/20 bg-white text-neutral-900 text-base"
         />
       </div>
       
       <button 
         type="submit"
-        class="w-full bg-[#dc2626] text-white font-semibold py-5 px-8 rounded text-lg hover:bg-[#b91c1c] transition-colors duration-200 tracking-wide"
+        class="w-full bg-[#dc2626] text-white font-semibold py-5 px-8 rounded text-base hover:bg-[#b91c1c] transition-colors duration-200 tracking-wide"
       >
-        Jag kommer! 😄
+        Jag kommer!
       </button>
     </form>
   </ContentBlock>

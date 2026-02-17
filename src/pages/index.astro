@@ -31,13 +31,13 @@ import Footer from '../components/Footer.astro';
     </div>
     
     <ContentBlock>
-      <h3 class="text-xl md:text-2xl font-normal text-neutral-900 mb-4">
+      <h3 class="text-2xl font-normal text-neutral-900 mb-4">
         15.00 – Vigsel och fest i Oxhallen
       </h3>
-      <p class="text-neutral-700 text-lg mb-4 leading-relaxed">
+      <p class="text-neutral-700 text-base mb-4 leading-relaxed">
         Klockan tre samlas vi i Oxhallen i Helsingborg för att säga ja – och sedan stannar vi kvar för att fira ordentligt. Allt händer på samma plats, så när vigseln är över behöver du bara vända dig om för att fortsätta kvällen. Mat, tal, skratt och dans ryms under samma tak.
       </p>
-      <div class="text-neutral-700 text-lg space-y-1">
+      <div class="text-neutral-700 text-base space-y-1">
         <p>Bredgatan 25</p>
         <p>252 25 Helsingborg</p>
       </div>
@@ -48,18 +48,18 @@ import Footer from '../components/Footer.astro';
     <SectionHeader title="Boende" />
     
     <ContentBlock>
-      <p class="text-neutral-800 mb-4 text-lg leading-relaxed">
+      <p class="text-neutral-800 mb-4 text-base leading-relaxed">
         Vi har reserverat rum på <strong class="font-semibold">[Hotellnamn]</strong> för våra gäster.
       </p>
       <p class="text-neutral-800 mb-6">
         <a 
           href="#" 
-          class="text-[#dc2626] hover:text-[#b91c1c] underline font-medium transition-colors text-lg"
+          class="text-[#dc2626] hover:text-[#b91c1c] underline font-medium transition-colors text-base"
         >
           Boka här →
         </a>
       </p>
-      <p class="text-neutral-600 mt-6 pt-6 border-t border-neutral-300/50 text-lg">
+      <p class="text-neutral-600 mt-6 pt-6 border-t border-neutral-300/50 text-base">
         <span class="text-[#d97706]">🌅</span> Delad frukost ingår 20 september.
       </p>
     </ContentBlock>
@@ -70,28 +70,28 @@ import Footer from '../components/Footer.astro';
     
     <div class="space-y-8">
       <ContentBlock>
-        <h3 class="text-xl font-normal text-neutral-900 mb-3">
+        <h3 class="text-2xl font-normal text-neutral-900 mb-3">
           👔 Klädkod
         </h3>
-        <p class="text-neutral-700 text-lg leading-relaxed">
+        <p class="text-neutral-700 text-base leading-relaxed">
           Snygg men inte stel. (Du ska kunna dansa.)
         </p>
       </ContentBlock>
       
       <ContentBlock>
-        <h3 class="text-xl font-normal text-neutral-900 mb-3">
+        <h3 class="text-2xl font-normal text-neutral-900 mb-3">
           👶 Barn
         </h3>
-        <p class="text-neutral-700 text-lg leading-relaxed">
+        <p class="text-neutral-700 text-base leading-relaxed">
           [Information om barn kommer]
         </p>
       </ContentBlock>
       
       <ContentBlock>
-        <h3 class="text-xl font-normal text-neutral-900 mb-3">
+        <h3 class="text-2xl font-normal text-neutral-900 mb-3">
           🎁 Gåvor
         </h3>
-        <p class="text-neutral-700 text-lg leading-relaxed">
+        <p class="text-neutral-700 text-base leading-relaxed">
           Det finaste är att du kommer. Men om du vill…
         </p>
       </ContentBlock>
@@ -119,13 +119,13 @@ import Footer from '../components/Footer.astro';
     </div>
     
     <ContentBlock>
-      <p class="text-neutral-800 mb-4 text-lg leading-relaxed">
+      <p class="text-neutral-800 mb-4 text-base leading-relaxed">
         Vill du hålla tal eller planera en överraskning? Kontakta våra toastmasters!
       </p>
       <p class="text-neutral-800">
         <a 
           href="mailto:toastpar@example.com" 
-          class="text-[#dc2626] hover:text-[#b91c1c] underline font-medium transition-colors text-lg"
+          class="text-[#dc2626] hover:text-[#b91c1c] underline font-medium transition-colors text-base"
         >
           toastpar@example.com
         </a>
@@ -134,6 +134,15 @@ import Footer from '../components/Footer.astro';
   </div>
   
   <RsvpForm />
+  
+  <div class="max-w-[1000px] mx-auto px-4 md:px-6 pt-12 pb-8 flex justify-center">
+    <img 
+      src="/images/baby.png" 
+      alt="" 
+      width="256"
+      height="374"
+    />
+  </div>
   
   <Footer />
 </BaseLayout>

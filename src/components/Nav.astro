@@ -1,38 +1,105 @@
 ---
 ---
 
-<nav class="nav-mustard sticky top-0 z-50 bg-[#D9A11F] border-b border-neutral-900/10" style="position: sticky;">
+<nav class="nav-mustard sticky top-0 z-50 bg-[#f5c400] border-b border-neutral-900/10" style="position: sticky;">
   <div class="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
-    <div class="flex items-center justify-center gap-4 md:gap-6">
-      <span class="text-lg md:text-xl lg:text-2xl" aria-hidden="true">🌭</span>
-      <ul class="flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-12 py-4 md:py-5">
+    <div class="flex items-center justify-center py-4 md:py-5">
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex items-center justify-center gap-6 lg:gap-10 xl:gap-12 flex-nowrap">
         <li>
-          <a href="#var-och-nar" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+          <a href="#var-och-nar" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-base font-medium tracking-wide whitespace-nowrap">
             Var & När
           </a>
         </li>
         <li>
-          <a href="#boende" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+          <a href="#boende" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-base font-medium tracking-wide whitespace-nowrap">
             Boende
           </a>
         </li>
         <li>
-          <a href="#bra-att-veta" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+          <a href="#bra-att-veta" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-base font-medium tracking-wide whitespace-nowrap">
             Bra att veta
           </a>
         </li>
         <li>
-          <a href="#toastpar" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+          <a href="#toastpar" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-base font-medium tracking-wide whitespace-nowrap">
             Toastpar
           </a>
         </li>
         <li>
-          <a href="#osa" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+          <a href="#osa" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-base font-medium tracking-wide whitespace-nowrap">
             OSA
           </a>
         </li>
       </ul>
-      <span class="text-lg md:text-xl lg:text-2xl" aria-hidden="true">🌻</span>
+      
+      <!-- Mobile Hamburger Button -->
+      <button 
+        id="mobile-menu-toggle"
+        class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none p-2 mx-auto"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="hamburger-line block w-6 h-0.5 bg-neutral-900 transition-all duration-300"></span>
+        <span class="hamburger-line block w-6 h-0.5 bg-neutral-900 transition-all duration-300"></span>
+        <span class="hamburger-line block w-6 h-0.5 bg-neutral-900 transition-all duration-300"></span>
+      </button>
+    </div>
+    
+    <!-- Mobile Dropdown Menu -->
+    <div 
+      id="mobile-menu"
+      class="md:hidden absolute top-full left-0 right-0 bg-[#fff9ec] shadow-lg opacity-0 invisible max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      aria-label="Navigation menu"
+    >
+      <ul class="flex flex-col py-4">
+        <li>
+          <a 
+            href="#var-och-nar" 
+            class="block text-neutral-900 hover:text-[#dc2626] hover:bg-neutral-900/5 transition-colors text-base font-medium tracking-wide py-3 px-6"
+            data-nav-link
+          >
+            Var & När
+          </a>
+        </li>
+        <li>
+          <a 
+            href="#boende" 
+            class="block text-neutral-900 hover:text-[#dc2626] hover:bg-neutral-900/5 transition-colors text-base font-medium tracking-wide py-3 px-6"
+            data-nav-link
+          >
+            Boende
+          </a>
+        </li>
+        <li>
+          <a 
+            href="#bra-att-veta" 
+            class="block text-neutral-900 hover:text-[#dc2626] hover:bg-neutral-900/5 transition-colors text-base font-medium tracking-wide py-3 px-6"
+            data-nav-link
+          >
+            Bra att veta
+          </a>
+        </li>
+        <li>
+          <a 
+            href="#toastpar" 
+            class="block text-neutral-900 hover:text-[#dc2626] hover:bg-neutral-900/5 transition-colors text-base font-medium tracking-wide py-3 px-6"
+            data-nav-link
+          >
+            Toastpar
+          </a>
+        </li>
+        <li>
+          <a 
+            href="#osa" 
+            class="block text-neutral-900 hover:text-[#dc2626] hover:bg-neutral-900/5 transition-colors text-base font-medium tracking-wide py-3 px-6"
+            data-nav-link
+          >
+            OSA
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
@@ -59,4 +126,83 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     background-size: 200px 200px;
   }
+  
+  /* Mobile menu open state */
+  .mobile-menu-open #mobile-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+  }
+  
+  /* Hamburger to X animation */
+  .mobile-menu-open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .mobile-menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
 </style>
+
+<script>
+  (function() {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('.nav-mustard');
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+    
+    if (!toggle || !menu || !nav) return;
+    
+    function openMenu() {
+      nav.classList.add('mobile-menu-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+      nav.classList.remove('mobile-menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    
+    function toggleMenu() {
+      if (nav.classList.contains('mobile-menu-open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+    
+    toggle.addEventListener('click', toggleMenu);
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        setTimeout(closeMenu, 100);
+      });
+    });
+    
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('mobile-menu-open') && 
+          !nav.contains(e.target) && 
+          !menu.contains(e.target)) {
+        closeMenu();
+      }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('mobile-menu-open')) {
+        closeMenu();
+      }
+    });
+    
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && nav.classList.contains('mobile-menu-open')) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
