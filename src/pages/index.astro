@@ -15,11 +15,15 @@ import Footer from '../components/Footer.astro';
   <Hero />
   
   <div id="var-och-nar" class="max-w-[1000px] mx-auto px-4 md:px-6 pb-16 md:pb-24 scroll-mt-20">
-    <SectionHeader title="Vigsel" />
+    <SectionHeader title="Vigsel och fest" />
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-      <ContentBlock>
-        <WeddingPlaceholder />
+      <ContentBlock class="p-0 overflow-hidden">
+        <img 
+          src="/images/oxhallen.jpg" 
+          alt="Oxhallen" 
+          class="w-full h-[300px] md:h-[400px] object-cover object-center rounded-lg"
+        />
       </ContentBlock>
       <ContentBlock>
         <MapBlock />
@@ -28,15 +32,14 @@ import Footer from '../components/Footer.astro';
     
     <ContentBlock>
       <h3 class="text-xl md:text-2xl font-normal text-neutral-900 mb-4">
-        15.00 - Vigsel i Mullsjö
+        15.00 – Vigsel och fest i Oxhallen
       </h3>
       <p class="text-neutral-700 text-lg mb-4 leading-relaxed">
-        Vi gifter oss i Mullsjö kyrka, en vacker kyrka mitt i naturen. Efter vigseln tar vi oss till festlokalen för mingel, middag och fest.
+        Klockan tre samlas vi i Oxhallen i Helsingborg för att säga ja – och sedan stannar vi kvar för att fira ordentligt. Allt händer på samma plats, så när vigseln är över behöver du bara vända dig om för att fortsätta kvällen. Mat, tal, skratt och dans ryms under samma tak.
       </p>
       <div class="text-neutral-700 text-lg space-y-1">
-        <p>Mullsjö kyrka</p>
-        <p>Kyrkogatan 1</p>
-        <p>565 32 Mullsjö</p>
+        <p>Bredgatan 25</p>
+        <p>252 25 Helsingborg</p>
       </div>
     </ContentBlock>
   </div>
