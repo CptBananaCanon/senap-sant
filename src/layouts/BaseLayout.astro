@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+
+const { title = "Mathilda + Nadim" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    
+    <!-- Google Fonts: Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts: Load fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Pompiere&family=Ms+Madi&display=swap" rel="stylesheet" />
+  </head>
+  <body class="text-neutral-900 min-h-screen">
+    <slot />
+  </body>
+</html>
+

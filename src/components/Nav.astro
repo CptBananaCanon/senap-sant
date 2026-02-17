@@ -1,0 +1,62 @@
+---
+---
+
+<nav class="nav-mustard sticky top-0 z-50 bg-[#D9A11F] border-b border-neutral-900/10" style="position: sticky;">
+  <div class="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
+    <div class="flex items-center justify-center gap-4 md:gap-6">
+      <span class="text-lg md:text-xl lg:text-2xl" aria-hidden="true">🌭</span>
+      <ul class="flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-12 py-4 md:py-5">
+        <li>
+          <a href="#var-och-nar" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+            Var & När
+          </a>
+        </li>
+        <li>
+          <a href="#boende" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+            Boende
+          </a>
+        </li>
+        <li>
+          <a href="#bra-att-veta" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+            Bra att veta
+          </a>
+        </li>
+        <li>
+          <a href="#toastpar" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+            Toastpar
+          </a>
+        </li>
+        <li>
+          <a href="#osa" class="text-neutral-900 hover:text-[#dc2626] transition-colors text-sm md:text-base font-medium tracking-wide">
+            OSA
+          </a>
+        </li>
+      </ul>
+      <span class="text-lg md:text-xl lg:text-2xl" aria-hidden="true">🌻</span>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav-mustard {
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(255, 245, 200, 0.35) 0%, transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(250, 235, 180, 0.28) 0%, transparent 48%),
+      radial-gradient(circle at 50% 50%, rgba(255, 250, 210, 0.22) 0%, transparent 55%),
+      radial-gradient(circle at 90% 10%, rgba(255, 200, 220, 0.12) 0%, transparent 42%);
+  }
+  
+  .nav-mustard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.25;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+</style>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  children: any;
+  layout?: 'default' | 'alternate';
+}
+
+const { id, title, children, layout = 'default' } = Astro.props;
+---
+
+<section id={id} class="scroll-mt-20 py-16 md:py-24 px-4 md:px-6">
+  <div class="max-w-[1200px] mx-auto">
+    <div class="paper-panel">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+        <div class={layout === 'alternate' ? 'md:col-span-5 md:col-start-8' : 'md:col-span-4'}>
+          <h2 class="text-neutral-900 mb-0">
+            {title}
+          </h2>
+        </div>
+        <div class={layout === 'alternate' ? 'md:col-span-5 md:col-start-1 md:row-start-1' : 'md:col-span-8'}>
+          <div class="prose prose-lg max-w-none text-neutral-700">
+            <slot />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

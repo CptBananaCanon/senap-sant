@@ -1,17 +1,136 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import ContentBlock from '../components/ContentBlock.astro';
+import WeddingPlaceholder from '../components/WeddingPlaceholder.astro';
+import MapBlock from '../components/MapBlock.astro';
+import RsvpForm from '../components/RsvpForm.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Mathilda <3 Nadim = Sant!">
+  <Nav />
+  <Hero />
+  
+  <div id="var-och-nar" class="max-w-[1000px] mx-auto px-4 md:px-6 pb-16 md:pb-24 scroll-mt-20">
+    <SectionHeader title="Vigsel" />
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <ContentBlock>
+        <WeddingPlaceholder />
+      </ContentBlock>
+      <ContentBlock>
+        <MapBlock />
+      </ContentBlock>
+    </div>
+    
+    <ContentBlock>
+      <h3 class="text-xl md:text-2xl font-normal text-neutral-900 mb-4">
+        15.00 - Vigsel i Mullsjö
+      </h3>
+      <p class="text-neutral-700 text-lg mb-4 leading-relaxed">
+        Vi gifter oss i Mullsjö kyrka, en vacker kyrka mitt i naturen. Efter vigseln tar vi oss till festlokalen för mingel, middag och fest.
+      </p>
+      <div class="text-neutral-700 text-lg space-y-1">
+        <p>Mullsjö kyrka</p>
+        <p>Kyrkogatan 1</p>
+        <p>565 32 Mullsjö</p>
+      </div>
+    </ContentBlock>
+  </div>
+  
+  <div id="boende" class="max-w-[1000px] mx-auto px-4 md:px-6 pb-16 md:pb-24 scroll-mt-20">
+    <SectionHeader title="Boende" />
+    
+    <ContentBlock>
+      <p class="text-neutral-800 mb-4 text-lg leading-relaxed">
+        Vi har reserverat rum på <strong class="font-semibold">[Hotellnamn]</strong> för våra gäster.
+      </p>
+      <p class="text-neutral-800 mb-6">
+        <a 
+          href="#" 
+          class="text-[#dc2626] hover:text-[#b91c1c] underline font-medium transition-colors text-lg"
+        >
+          Boka här →
+        </a>
+      </p>
+      <p class="text-neutral-600 mt-6 pt-6 border-t border-neutral-300/50 text-lg">
+        <span class="text-[#d97706]">🌅</span> Delad frukost ingår 20 september.
+      </p>
+    </ContentBlock>
+  </div>
+  
+  <div id="bra-att-veta" class="max-w-[1000px] mx-auto px-4 md:px-6 pb-16 md:pb-24 scroll-mt-20">
+    <SectionHeader title="Bra att veta" />
+    
+    <div class="space-y-8">
+      <ContentBlock>
+        <h3 class="text-xl font-normal text-neutral-900 mb-3">
+          👔 Klädkod
+        </h3>
+        <p class="text-neutral-700 text-lg leading-relaxed">
+          Snygg men inte stel. (Du ska kunna dansa.)
+        </p>
+      </ContentBlock>
+      
+      <ContentBlock>
+        <h3 class="text-xl font-normal text-neutral-900 mb-3">
+          👶 Barn
+        </h3>
+        <p class="text-neutral-700 text-lg leading-relaxed">
+          [Information om barn kommer]
+        </p>
+      </ContentBlock>
+      
+      <ContentBlock>
+        <h3 class="text-xl font-normal text-neutral-900 mb-3">
+          🎁 Gåvor
+        </h3>
+        <p class="text-neutral-700 text-lg leading-relaxed">
+          Det finaste är att du kommer. Men om du vill…
+        </p>
+      </ContentBlock>
+    </div>
+  </div>
+  
+  <div id="toastpar" class="max-w-[1000px] mx-auto px-4 md:px-6 pb-16 md:pb-24 scroll-mt-20">
+    <SectionHeader title="Toastpar" />
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <ContentBlock>
+        <img 
+          src="/images/jonas.jpg" 
+          alt="Jonas" 
+          class="w-full aspect-square object-cover rounded-full"
+        />
+      </ContentBlock>
+      <ContentBlock>
+        <img 
+          src="/images/lina.jpg" 
+          alt="Lina" 
+          class="w-full aspect-square object-cover rounded-full"
+        />
+      </ContentBlock>
+    </div>
+    
+    <ContentBlock>
+      <p class="text-neutral-800 mb-4 text-lg leading-relaxed">
+        Vill du hålla tal eller planera en överraskning? Kontakta våra toastmasters!
+      </p>
+      <p class="text-neutral-800">
+        <a 
+          href="mailto:toastpar@example.com" 
+          class="text-[#dc2626] hover:text-[#b91c1c] underline font-medium transition-colors text-lg"
+        >
+          toastpar@example.com
+        </a>
+      </p>
+    </ContentBlock>
+  </div>
+  
+  <RsvpForm />
+  
+  <Footer />
+</BaseLayout>
